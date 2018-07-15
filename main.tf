@@ -2,6 +2,14 @@ provider "aws" {
   region = "us-west-1"
 }
 
+terraform {
+    backend "s3" {
+        bucket = "tiger-terraform-backend"
+        key    = "core-infra"
+        region = "us-west-1"
+    }
+}
+
 resource "aws_kms_key" "master" {
   description             = "Master KMS Key"
   deletion_window_in_days = 10
