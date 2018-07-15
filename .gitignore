@@ -1,3 +1,5 @@
 tf.plan
 terraform.tfstate
 .terraform/
+*.swo
+*.swp
